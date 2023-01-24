@@ -1,0 +1,14 @@
+{
+  "bloc": "search1",
+  "states": [
+    {
+      "name": "loading"
+    }
+  ],
+  "events": [
+    {
+      "name": "load"
+    }
+  ],
+  "entity": "AppEntity"
+}
