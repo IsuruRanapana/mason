@@ -1,0 +1,124 @@
+{
+  "package_name": "abcd",
+  "flavors": [
+    {
+      "name": "DEV",
+      "IPAddress": "newsapi.org",
+      "ServerProtocol": "https://",
+      "ContextRoot": "v2/"
+    },
+    {
+      "name": "PROD",
+      "IPAddress": "newsapi.org",
+      "ServerProtocol": "https://",
+      "ContextRoot": "v2/"
+    }
+  ],
+  "exceptions": [
+    {
+      "name": "ServerException",
+      "variable": [
+        {
+          "type": "ErrorResponseModel"
+        }
+      ]
+    },
+    {
+      "name": "CacheException",
+      "variable": []
+    },
+    {
+      "name": "UnAuthorizedException",
+      "variable": [
+        {
+          "type": "ErrorResponseModel"
+        }
+      ]
+    },
+    {
+      "name": "DioException",
+      "variable": [
+        {
+          "type": "ErrorResponseModel"
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "name": "ServerFailure",
+      "variable": [
+        {
+          "type": "ErrorResponseModel"
+        }
+      ]
+    },
+    {
+      "name": "CacheFailure",
+      "variable": [
+
+      ]
+    },
+    {
+      "name": "ConnectionFailure",
+      "variable": []
+    },
+    {
+      "name": "AuthorizedFailure",
+      "variable": [
+        {
+          "type": "ErrorResponseModel"
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "name": "SOMETHING_WRONG",
+      "value": "Something went wrong"
+    },
+    {
+      "name": "CONNECTION_ERROR",
+      "value": "Connection Error"
+    },
+    {
+      "name": "UNAUTHORIZE",
+      "value": "Authorization Error"
+    },
+    {
+      "name": "UNEXPECTED",
+      "value": "Unexpected Error"
+    },
+    {
+      "name": "ERROR",
+      "value": "Error"
+    }
+  ],
+  "colors": [
+    {
+      "name": "colorPrimary",
+      "value": "0xFFFF3A44"
+    },
+    {
+      "name": "colorSecondary",
+      "value": "0xFF0080FF"
+    },
+    {
+      "name": "colorTertiary",
+      "value": "0xFFFFE600"
+    },
+    {
+      "name": "appBorderColor",
+      "value": "0xFFB5B5B5"
+    },
+    {
+      "name": "appGrayColor",
+      "value": "0xFF707070"
+    }
+  ],
+  "common_error_response": [
+    {"key": "response_code","type": "String?"},
+    {"key": "response_error","type": "String?"}
+
+  ]
+}
