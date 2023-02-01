@@ -11,15 +11,15 @@ part 'common_error_response_model.g.dart';
 class ErrorResponseModel extends ErrorResponseEntity {
   const ErrorResponseModel({
   {{#common_error_response}}
-    this.{{name.camelCase()}},
+    this.{{key.camelCase()}},
   {{/common_error_response}}
 
-  }) : super(responseCode: responseCode, responseError: responseError);
+  }) : super({{#common_error_response}}{{key.camelCase()}}: {{key.camelCase()}}, {{/common_error_response}});
 
-  @JsonKey(name: 'response_code')
-  final String? responseCode;
-  @JsonKey(name: 'response_error')
-  final String? responseError;
+  {{#common_error_response}}
+  @JsonKey(name: '{{{key}}}')
+  final {{{type}}}{{^required}}?{{/required}} {{key.camelCase()}};
+  {{/common_error_response}}
 
   factory ErrorResponseModel.fromJson(Map<String, dynamic> json) =>
       _$ErrorResponseModelFromJson(json);

@@ -117,8 +117,8 @@
     }
   ],
   "common_error_response": [
-    {"key": "response_code","type": "String?"},
-    {"key": "response_error","type": "String?"}
+    {"key": "response_code","type": "String", "required":false},
+    {"key": "response_error","type": "String", "required":false}
 
   ]
 }
