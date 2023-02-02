@@ -10,6 +10,9 @@ bricks:
   initial_development:
     path:
       bricks/initial_development
+  api_integration:
+    path:
+      bricks/api_integration
   # Bricks can also be imported via git url.
   # Uncomment the following lines to import
   # a brick from a remote git url.
